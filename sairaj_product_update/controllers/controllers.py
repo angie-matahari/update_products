@@ -27,7 +27,6 @@ class SairajProductUpdate(http.Controller):
                 ['location_id', 'quantity'],
                 ['location_id']
             )
-            _logger.info(quants)
 
             if quants:
                 initial_category_state = product.categ_id.property_valuation
