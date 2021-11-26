@@ -16,8 +16,8 @@ with open('product.csv', encoding='utf-8') as csv_file:
         data = {"params": {'product': row[1]}}
         data_json = json.dumps(data)
         print(f'call update url with data {data_json}')
-        # response = requests.post(url=url, data=data_json, headers=headers)
-        # print(response.text)
+        response = requests.post(url=url, data=data_json, headers=headers)
+        print(response.text)
         end_loop = time.time()
         print(f'Single product update time {end_loop - start_loop} s')
     end_for_loop = time.time()

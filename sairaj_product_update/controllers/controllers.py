@@ -70,29 +70,3 @@ class SairajProductUpdate(http.Controller):
                                 return {'result': result, 'message': 'Product updated successfully'}
 
         return {'result': 'Error', 'message': 'Product update failed!'}
-
-        # if res:
-        #     _logger.info(f'inventory_reset {inventory_reset.state}')
-        #     inventory_reset.line_ids.unlink()
-        #     _logger.info(
-        #         f'line_ids qty {inventory_reset.line_ids.mapped("product_qty")}')
-        #     lines = []
-        #     for quant in quants:
-        #         vals = {
-        #             'product_id': int(product_id),
-        #             'location_id': quant['location_id'][0],
-        #             'product_uom_id': product.uom_id,
-        #             'theoretical_qty': quant['quantity'],
-        #             'product_qty': quant['quantity']
-        #         }
-        #         lines.append((0, 0, vals))
-        #     _logger.info(f'lines {lines}')
-        #     inventory_reset.sudo().write({
-        #         'line_ids': lines
-        #     })
-        #     _logger.info(
-        #         f'line_ids qty {inventory_reset.line_ids.mapped("product_qty")}')
-        #     inventory_reset.action_validate()
-        #     _logger.info(f'inventory_reset {inventory_reset.state}')
-
-        return product
