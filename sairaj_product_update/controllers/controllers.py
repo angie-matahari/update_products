@@ -16,10 +16,11 @@ class SairajProductUpdate(http.Controller):
         product_id = data['params']['product']
 
         if product_id:
-            product = request.env['product.product'].sudo().browse(product_id)
+            product = request.env['product.product'].sudo().browse(
+                int(product_id))
             quants = request.env['stock.quant'].sudo().read_group(
                 [
-                    ('product_id', '=', int(product_id)),
+                    ('product_id', '=', product.id),
                     ('location_id.usage', '=', 'internal'),
                     ('quantity', '>', 0)
                 ],

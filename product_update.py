@@ -12,6 +12,8 @@ with open('product.csv', encoding='utf-8') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     start_for_loop = time.time()
     for i, row in enumerate(csv_reader):
+        if not i:
+            continue
         start_loop = time.time()
         data = {"params": {'product': row[1]}}
         data_json = json.dumps(data)
