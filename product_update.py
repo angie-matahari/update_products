@@ -4,7 +4,7 @@ import csv
 
 import time
 
-url = 'https://sairaj-dev2-3663518.dev.odoo.com/product_update/'
+url = 'https://sairaj-dev2-3682897.dev.odoo.com/product_update/'
 headers = {'Content-Type': 'application/json'}
 file_path = '/home/kanini/update_products'
 fails = []
@@ -31,5 +31,3 @@ with open('product.csv', encoding='utf-8') as csv_file:
 
 with open('fails.json', 'w+') as f:
     f.write(fails)
-
-# dic = '{"jsonrpc": "2.0", "id": null, "result": {"params": {"product": "Ironman Key Chain, Part # KEY001"}}}'
