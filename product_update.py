@@ -4,7 +4,7 @@ import csv
 
 import time
 
-url = 'https://sairaj-dev2-3682897.dev.odoo.com/product_update/'
+url = 'https://sairaj-dev2-3686415.dev.odoo.com/product_update/'
 headers = {'Content-Type': 'application/json'}
 file_path = '/home/kanini/update_products'
 fails = []
