@@ -38,7 +38,7 @@ class SairajProductUpdate(http.Controller):
                         initial_quantity = quant.get('quantity')
 
                         inventory = request.env['stock.inventory'].sudo().create({
-                            'name': product.name + ' - ' + str(datetime.now()) + 'WRONG COST',
+                            'name': product.name + ' -WRONG COST- ' + str(datetime.now()),
                             'product_id': product.id,
                             'filter': 'product',
                             'location_id': location_id
@@ -53,7 +53,7 @@ class SairajProductUpdate(http.Controller):
 
                         if new_res:
                             inventory_reset = request.env['stock.inventory'].sudo().create({
-                                'name': product.name + ' - ' + datetime.today().strftime('%m/%d/%y') + 'WRONG COST',
+                                'name': product.name + ' -WRONG COST- ' + datetime.today().strftime('%m/%d/%y'),
                                 'product_id': product.id,
                                 'filter': 'product',
                                 'location_id': location_id
